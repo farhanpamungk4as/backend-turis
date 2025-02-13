@@ -1,7 +1,6 @@
-import { IsNotEmpty, IsInt, IsString, IsDate } from "class-validator";
+import { IsNotEmpty, IsInt, IsString, IsDate } from 'class-validator';
 
 export class PerjalananTurisDto {
-
   @IsNotEmpty()
   @IsInt()
   email: string;

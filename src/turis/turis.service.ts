@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { InjectRepository } from "@nestjs/typeorm";
-import { Repository } from "typeorm";
-import { Turis } from "./entities/turis.entity";
-import { CreateTurisDto } from "./dto/create-turis.dto";
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Turis } from './entities/turis.entity';
+import { CreateTurisDto } from './dto/create-turis.dto';
 
 @Injectable()
 export class TurisService {
@@ -10,9 +10,9 @@ export class TurisService {
 
   findAll() {
     return this.turisRepo.find({
-      select: ["nama", "umur", "tanggal_lahir", "tempat_tinggal"],
+      select: ['nama', 'umur', 'tanggal_lahir', 'tempat_tinggal'],
     });
-  }  
+  }
 
   create(data: CreateTurisDto) {
     return this.turisRepo.save(data);
